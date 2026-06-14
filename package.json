@@ -2,19 +2,26 @@
   "name": "claude-interactive",
   "version": "0.1.0",
   "description": "Drop-in replacement for claude -p using interactive mode (Pool 1 billing)",
-  "keywords": ["claude", "anthropic", "claude-code", "headless", "automation", "pool1"],
+  "keywords": [
+    "claude",
+    "anthropic",
+    "claude-code",
+    "headless",
+    "automation",
+    "pool1"
+  ],
   "homepage": "https://github.com/oj3g0a/claude-interactive#readme",
   "bugs": {
     "url": "https://github.com/oj3g0a/claude-interactive/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oj3g0a/claude-interactive.git"
+    "url": "git+https://github.com/oj3g0a/claude-interactive.git"
   },
   "license": "MIT",
   "author": "oj3g0a",
   "bin": {
-    "claude-interactive": "./bin/cli.js"
+    "claude-interactive": "bin/cli.js"
   },
   "main": "./src/index.js",
   "files": [
