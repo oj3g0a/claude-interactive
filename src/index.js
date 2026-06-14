@@ -143,7 +143,18 @@ function runInteractive(prompt, options = {}) {
       }
     });
 
-    proc.onExit(() => { finish(responseBuffer); });
+    proc.onExit(({ exitCode }) => {
+      if (!promptSent && exitCode !== 0) {
+        if (resolved) return;
+        resolved = true;
+        clearTimeout(settleTimer);
+        clearTimeout(startupTimer);
+        clearTimeout(hardTimer);
+        reject(new Error(`claude process exited with code ${exitCode} before responding`));
+      } else {
+        finish(responseBuffer);
+      }
+    });
 
     startupTimer = setTimeout(sendPrompt, maxStartupMs);
     hardTimer = setTimeout(() => { if (!resolved) finish(responseBuffer); }, timeoutMs);
