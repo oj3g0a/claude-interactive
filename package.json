@@ -1,6 +1,6 @@
 {
   "name": "claude-interactive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Drop-in replacement for claude -p using interactive mode (Pool 1 billing)",
   "keywords": [
     "claude",
