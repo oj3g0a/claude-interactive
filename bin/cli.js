@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 'use strict';
 
-const { runInteractive } = require('../src/index');
-
 const USAGE = `Usage: claude-interactive -p <prompt> [options]
 
 Drop-in replacement for "claude -p" using interactive mode (Pool 1 billing).
@@ -71,6 +69,8 @@ if (prompt !== null) {
 }
 
 function run(p) {
+  // Lazy require so --help works even without npm install
+  const { runInteractive } = require('../src/index');
   runInteractive(p, options)
     .then((response) => {
       process.stdout.write(response + '\n');
