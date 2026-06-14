@@ -1,3 +1,7 @@
+[![npm version](https://img.shields.io/npm/v/claude-interactive)](https://www.npmjs.com/package/claude-interactive)
+[![CI](https://github.com/oj3g0a/claude-interactive/actions/workflows/ci.yml/badge.svg)](https://github.com/oj3g0a/claude-interactive/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # claude-interactive
 
 > **Run `claude -p` within your subscription. No extra billing. No code changes.**
