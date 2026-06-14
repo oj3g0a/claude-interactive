@@ -1,0 +1,38 @@
+{
+  "name": "claude-interactive",
+  "version": "0.1.0",
+  "description": "Drop-in replacement for claude -p using interactive mode (Pool 1 billing)",
+  "keywords": ["claude", "anthropic", "claude-code", "headless", "automation", "pool1"],
+  "homepage": "https://github.com/oj3g0a/claude-interactive#readme",
+  "bugs": {
+    "url": "https://github.com/oj3g0a/claude-interactive/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oj3g0a/claude-interactive.git"
+  },
+  "license": "MIT",
+  "author": "oj3g0a",
+  "bin": {
+    "claude-interactive": "./bin/cli.js"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "bin/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:unit": "node --test test/index.test.js",
+    "test:cli": "node --test test/cli.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
